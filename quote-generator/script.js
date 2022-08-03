@@ -13,6 +13,8 @@ function newQuote() {
 
     if(!quote.author){
         author.textContent = "Anonym"
+    }else{
+        author.textContent = quote.author
     }
 
     if(quote.text.length > 120){
@@ -20,7 +22,6 @@ function newQuote() {
     }
 
     text.textContent = quote.text
-    author.textContent = quote.author
 }
 
 async function getQuotes(){
@@ -30,7 +31,7 @@ async function getQuotes(){
         apiQuotes = await response.json()
         newQuote()
     } catch (error) {
-        
+        console.log(error)
     }
 }
 
