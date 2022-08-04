@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--4nVcu5jx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://cdn.dribbble.com/users/722835/screenshots/4082720/bot_icon.gif");
+    background-size: 900px 700px;
+    background-repeat: no-repeat;
+}
+
+button {
+    font-size: 2rem;
+    padding: 20px 40px;
+    transform: translateX(150px);
+    box-shadow: 2px 3px 6px #000;
+}
+
+button:active{
+    transform: translate(150px, 10px);
+    box-shadow: 2px 0px 6px #000;
+
+}
