@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="container">
+        <!-- image  -->
+        <div class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/tr/thumb/d/d1/MaNga%2B.jpg/250px-MaNga%2B.jpg" alt="">
+        </div>
+        <!-- title  -->
+        <div>
+            <h2>Cevapsız Sorular</h2>
+            <p>maNga</p>
+        </div>
+        <!-- audio  -->
+        <audio src=""></audio>
+        <!-- progress-container -->
+        <div class="progress-container">
+            <div class="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration">2:00</span>
+            </div>
+        </div>
+        <!-- buttons  -->
+        <div class="buttons">
+            <i class="fa-solid fa-backward" id="prev"></i>
+            <i class="fa-solid fa-play" id="play"></i>
+            <i class="fa-solid fa-forward" id="next"></i>
+        </div>
+    </div>
+
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
