@@ -11,6 +11,8 @@ const progressContainer = document.querySelector(".progress-container")
 const progress = document.querySelector(".progress")
 const currentTimeEl = document.getElementById("current-time")
 const durationEl = document.getElementById("duration")
+const volumeContainer = document.querySelector(".volume-container")
+const volumeEl = document.querySelector(".volume")
 
 let isPlaying = false
 let currentIndex = 1
@@ -34,6 +36,7 @@ function loadSong(){
     artist.textContent = songs[currentIndex].artist
     img.setAttribute("src", `${songs[currentIndex].imgSrc}`)
     music.setAttribute("src", `${songs[currentIndex].audioUrl}`)
+    setVolumeBar()
 }
 
 
@@ -57,11 +60,25 @@ function updateProgressbar(e){
 
     durationEl.innerText = `${minute}:${second}`
     currentTimeEl.innerText = `${currentMinute}:${currentSecond}`
-
-    e.target.volume = 1
-
 }
 
+function setTime(e){
+    const clickPoint = e.offsetX
+    const width = this.clientWidth
+    const {duration} = music
+    music.currentTime = (clickPoint/width) * duration;
+}
+
+function setVolumeBar(){
+    volumeEl.style.width = `${music.volume * 100}%`
+}
+
+function setVolume(e){
+    const clickPoint = e.offsetX
+    const width = this.clientWidth
+    music.volume = clickPoint/width;
+    volumeEl.style.width = `${(clickPoint/width)*100}%`
+}
 
 playBtn.addEventListener("click", () => isPlaying ? pause() : play())
 nextBtn.addEventListener("click", () => {
@@ -81,3 +98,5 @@ prevBtn.addEventListener("click", () => {
 }
 )
 music.addEventListener("timeupdate", updateProgressbar)
+progressContainer.addEventListener("click", setTime)
+volumeContainer.addEventListener("click", setVolume)
