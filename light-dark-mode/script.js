@@ -3,8 +3,9 @@ const image1 = document.getElementById("image1")
 const image2 = document.getElementById("image2")
 const image3 = document.getElementById("image3")
 const themeBtn = document.querySelector(".switch-btn")
-let theme = "light";
+const checkbox = document.querySelector("input")
 
+console.log(checkbox);
 
 function imgSrc(x){
     image1.setAttribute("src", `img/undraw_bitcoin_re_urgq_${x}.svg`)
@@ -16,21 +17,20 @@ function darkMode(){
     document.documentElement.setAttribute("data-theme", "dark")
     nav.style.background = "rgb(0 0 0 / 20%)"
     imgSrc("dark")
-    theme = "dark"
 }
 
 function lightMode(){
     document.documentElement.setAttribute("data-theme", "light")
     nav.style.background = "rgb(255 255 255 / 20%)"
     imgSrc("light")
-    theme = "light"
 }
 
 
-themeBtn.addEventListener("click", () => {
-    if(theme == "light"){
+checkbox.addEventListener("click", () => {
+    if(checkbox.checked == true){
         darkMode()
-    }else if(theme == "dark"){
+    }else if(checkbox.checked == false){
         lightMode()
     }   
 })
+
