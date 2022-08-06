@@ -47,8 +47,9 @@ p {
     overflow: hidden;
 }
 
-.img{
+img{
     width: 100%;
+    height: auto;
 }
 
 .progress-container{
@@ -63,7 +64,7 @@ p {
     background: #fff;
     border-radius: 5px;
     height: 100%;
-    width: 66%;
+    width: 0%;
     transition: width 0.1s linear;
 
 }
@@ -95,3 +96,4 @@ p {
 #play{
     font-size: 35px;
 }
+
