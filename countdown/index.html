@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/music-player/8168661_itunes_music_audio_player_icon.png">
-    <title>Music Player</title>
+    <link rel="icon" type="image/x-icon" href="/countdown/sand-clock.png">
+    <title>Countdown</title>
 </head>
 <body>
     <video class="video-background" loop muted autoplay>
@@ -15,7 +15,9 @@
     </video>
     <div class="video-overlay"></div>
     <div class="container">
-        <div class="input-container" hidden>
+
+        <!-- input  -->
+        <div class="input-container">
             <h1>Create Custom Countdown</h1>
             <form action="" class="form" id="countDownForm">
                 <label for="title">Title</label>
@@ -25,21 +27,28 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
+
+        <!-- countdown  -->
         <div class="countdown" hidden>
             <h1 id="countdown-title">Coutdown Title</h1>
             <ul>
-                <li><span>2</span>Days</li>
-                <li><span>20</span>Hours</li>
-                <li><span>32</span>Minutes</li>
-                <li><span>52</span>Seconds</li>
+                <li><span></span>Days</li>
+                <li><span></span>Hours</li>
+                <li><span></span>Minutes</li>
+                <li><span></span>seconds</li>
             </ul>
             <button id="countdown-button">Reset</button>
         </div>
-        <div class="complete">
+
+        <!-- complete  -->
+        <div class="complete" hidden>
             <h1 class="complete-title">Countdown Complete!</h1>
             <h1 class="countdown-info">Countdown Finished on 05-05-2022</h1>
             <button id="complete-button">New Countdown</button>
         </div>
+
+        <!-- loader  -->
+        <div class="loader" hidden></div> 
     </div>
 
     <script type="module" src="script.js"></script>
