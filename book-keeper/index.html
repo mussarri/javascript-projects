@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="">
+    <title>Book Keeper</title>
+</head>
+<body>
+    <h1 id="open-modal">Add Bookmark</h1>
+
+    <div class="items-container">
+
+        <div class="modal-container" id="modal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Add Bookmark</h3>
+                    <i class="fa-solid fa-times" id="close-modal"></i>
+                </div>
+                <div class="modal-content">
+                    <form id="bookmark-form">
+                        <div class="form-group">
+                            <label for="website-name" class="form-label">Website Name</label>
+                            <input type="text" id="website-name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="website-url" class="form-label">Website URL</label>
+                            <input type="text" id="url" type="url" class="form-input">
+                        </div>
+                        <div class="save-button">
+                            <button>Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
