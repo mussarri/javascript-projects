@@ -5,7 +5,7 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background-color: aqua;
+    background-color: rgb(173, 173, 173);
     display: flex;
     justify-content: center;
     align-items: center;
