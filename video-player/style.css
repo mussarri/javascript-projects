@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    max-width: 80vw;
+    min-width: 600px;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.show-controls {
+    width: 100%;
+    z-index: 2;
+    height: 60px;
+    background: transparent;
+    margin-top: -64px;
+    position: relative;
+}
+
+.controls-container {
+    background-color: rgba(75, 75, 75, 0);
+    padding: 1px 0px;
+    display: none;
+}
+
+.player:hover .controls-container{
+    display: block;
+}
+
+.progress-range {
+    width: 100%;
+    background: rgb(151, 134, 134);
+    height: 10px;
+    margin-top: 1px;
+}
+
+.progress-range:hover {
+    width: 100%;
+    background: rgb(151, 134, 134);
+    height: 12px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 90%;
+    background: #111;
+    height: 100%;
+}
+
+.control-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: rgba(102, 102, 102, 0.881);
+}
+
+.controls-left{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.play-controls{
+    font-size: 1.5rem;
+}
+
+.play-controls:hover{
+    color: #ccc;
+    cursor: pointer;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.volume:hover {
+    color: #ccc;
+    cursor: pointer;
+}
+.volume-range{
+    width: 100px;
+    height: 4px;
+    background: #000;
+}
+
+.volume-range:hover{
+    width: 100px;
+    height: 8px;
+    background: #000;
+    cursor: pointer;
+}
+.volume-bar {
+    width: 50%;
+    height: 100%;
+    background: rgb(177, 177, 177);
+}
+
+.controls-right{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.fulscreen{
+    font-size: 1.5rem;
+}
+
+.fulscreen:hover{
+    cursor: pointer;
+    color: #ddd;
+}
