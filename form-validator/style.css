@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: Sen, sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+}
+
+.container {
+    background: #fff;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgb(91, 91, 91)
+}
+
+form {
+    width: 85%;
+}
+
+.form-group{
+    margin-top: 10px;
+}
+
+input{
+    width : 100%;
+    margin: 3px 0;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    outline: none;
+    transition: all 0.3s;
+    padding: 5px;
+}
+
+input:valid{
+    border-color: green;
+}
+
+input:invalid{
+    border-color: red;
+}
+
+button {
+    background-color: #ddd;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+button:hover{
+    filter: brightness(105%);
+    cursor: pointer;
+}
