@@ -61,7 +61,7 @@ video {
 }
 
 .progress-bar {
-    width: 90%;
+    width: 0%;
     background: #111;
     height: 100%;
 }
@@ -94,14 +94,14 @@ video {
     align-items: center;
     column-gap: 15px;
 }
-.volume:hover {
-    color: #ccc;
+.volume-icon:hover {
+    color: rgb(45, 45, 45);
     cursor: pointer;
 }
 .volume-range{
     width: 100px;
     height: 4px;
-    background: #000;
+    background: rgb(177, 177, 177);;
 }
 
 .volume-range:hover{
@@ -113,7 +113,7 @@ video {
 .volume-bar {
     width: 50%;
     height: 100%;
-    background: rgb(177, 177, 177);
+    background: #111;
 }
 
 .controls-right{

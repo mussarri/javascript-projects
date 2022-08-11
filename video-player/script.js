@@ -6,6 +6,7 @@ const progressRange = document.querySelector(".progress-range")
 const progressBar = document.querySelector(".progress-bar")
 const timeElapsed = document.querySelector(".time-elapsed")
 const timeDuration = document.querySelector(".time-duration")
+const volumeIcon = document.querySelector(".volume-icon")
 
 function playPause() {
         if(!video.paused) {
@@ -31,10 +32,14 @@ function displayTime(x){
 function updateProgres(e){
     const {duration , currentTime} = e.target
     progressBar.style.width = `${(currentTime/duration)*100}%`
-    console.log(duration);
-    console.log(displayTime(250));
-    timeElapsed.textContent = `${displayTime(currentTime)[1]}:${displayTime(currentTime)[0]}` 
-    timeDuration.textContent = `${displayTime(duration)[1]}:${displayTime(duration)[0]}` 
+    // if hour is there show hour:minute:second
+    if(displayTime[2]){
+        timeElapsed.textContent = `${displayTime(currentTime)[2]}:${displayTime(currentTime)[1]}:${displayTime(currentTime)[0]}`
+        timeDuration.textContent = `${displayTime(duration)[2]}:${displayTime(duration)[1]}:${displayTime(duration)[0]}` 
+    }else{
+        timeElapsed.textContent = `${displayTime(currentTime)[1]}:${displayTime(currentTime)[0]}` 
+        timeDuration.textContent = `${displayTime(duration)[1]}:${displayTime(duration)[0]}` 
+    }
 
 }
 
@@ -49,8 +54,46 @@ function spacePlay(e){
     if(e.keyCode == 32) playPause()
 }
 
+function showVolume(e){
+    const rate =  (e.offsetX/volumeRange.offsetWidth);
+    volumeBar.style.width = `${rate*100}%`
+    video.volume = rate
+}
+
+function mute(e){
+    if(e.target.classList.contains("fa-volume-up")){
+        e.target.classList.replace("fa-volume-up","fa-volume-off");volumeBar.style.width = `${0}%`
+    }else{
+        e.target.classList.replace("fa-volume-off","fa-volume-up");
+        volumeBar.style.width = `${100}%`
+    }
+}
+
+function setMute(e){
+    console.log(e.target)
+}
+
+
+
 playBtn.onclick = playPause
 video.onclick = playPause
 window.addEventListener("keydown", spacePlay)
 video.addEventListener("timeupdate" ,updateProgres)
 progressRange.addEventListener("click", changeDuration)
+volumeIcon.addEventListener("click", mute)
+volumeRange.addEventListener("click", showVolume)
+
+
+// progressRange.addEventListener("mousemove", progressHover)
+// progressRange.addEventListener("mouseleave", progressHoverEnd)
+
+
+// function progressHover(e){
+//     progressBar.style.width = `${(e.layerX/progressRange.offsetWidth)*100}%`
+// }
+
+// function progressHoverEnd(){
+//     const rate = (video.currentTime/video.duration)*100;
+//     console.log(rate);
+//     progressBar.style.width = `${rate}%`
+// } 
