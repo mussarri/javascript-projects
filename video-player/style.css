@@ -14,32 +14,34 @@ body {
 .player {
     max-width: 80vw;
     min-width: 600px;
-    border-radius: 10px;
-    background-color: #fff;
+    border-radius: 5px;
+    background-color: transparent;
     overflow: hidden;
+    position: relative;
 }
 
 video {
     width: 100%;
     height: auto;
-    margin: 0;
-    padding: 0;
+}
+
+.video-fulscreen{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .show-controls {
     width: 100%;
     z-index: 2;
-    height: 60px;
     background: transparent;
-    margin-top: -64px;
-    position: relative;
+    bottom: 0;
+    position: absolute;
 }
 
-.controls-container {
-    background-color: rgba(75, 75, 75, 0);
-    padding: 1px 0px;
+.controls-container{
     display: none;
-}
+} 
 
 .player:hover .controls-container{
     display: block;
@@ -101,13 +103,12 @@ video {
 .volume-range{
     width: 100px;
     height: 4px;
-    background: rgb(177, 177, 177);;
+    background: rgb(177, 177, 177);
 }
 
 .volume-range:hover{
     width: 100px;
     height: 8px;
-    background: #000;
     cursor: pointer;
 }
 .volume-bar {
@@ -122,11 +123,17 @@ video {
     column-gap: 12px;
 }
 
-.fulscreen{
+.player-speed{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.fullscreen{
     font-size: 1.5rem;
 }
 
-.fulscreen:hover{
+.fullscreen:hover{
     cursor: pointer;
     color: #ddd;
 }
