@@ -41,11 +41,11 @@ i {
 }
 
 .player-container i{
-    color: rgb(12, 47, 240);
+    color: rgb(62, 89, 223);
 }
 
 .computer-container i{
-    color: rgb(240, 149, 12);
+    color: rgb(62, 89, 223);
 }
 
 .results{
