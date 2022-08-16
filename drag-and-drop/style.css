@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-image: url(img/cosmic-timetraveler--SFhuMwFClk-unsplash.jpg);
+    height: 100vh;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.container{
+    margin: 50px 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.drag-column{
+    background-color: rgba(56, 50, 54, 0.491);
+    font-size: 1.3rem;
+    flex: 1;
+    border-radius: 5px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.436);
+    overflow: hidden;
+    height: fit-content;
+}
+
+.drag-item-list{
+   height: fit-content;
+}
+
+ul{
+    padding: 0 10px;
+}
+
+.header{
+    background: rgba(209, 123, 48, 0.779);
+    padding: 10px 20px;
+    color: rgb(108, 63, 14);
+}
+
+h1{
+    margin: 0;
+}
+
+.drag-item{
+    background: rgb(113, 127, 198);
+    color: white;
+    list-style-type: none;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin-top: 10px;
+    text-align: center;
+    max-height: 130px;
+    overflow-y: auto;
+}
+
+.drag-footer{
+    padding: 10px 10px ;
+}
+
+button{
+    padding: 10px 10px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.add-column{
+    flex: 0.5;
+    background-color: rgba(56, 50, 54, 0.491);
+    height: 60px;
+    border-radius: 5px;
+    text-align: center;
+    color: whitesmoke;
+    line-height: 35px;
+    cursor: pointer;
+}
