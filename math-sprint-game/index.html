@@ -7,15 +7,14 @@ mldivg="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/music-player/8168661_itunes_music_audio_player_icon.png">
-    <title>Music Player</title>
+    <title>Math Sprint Game</title>
 </head>
 <body>
     <div class="game-container">
         <div class="header">
             <h1>Math Sprint Game</h1>
         </div>
-        <div class="card" id="splash-page" hidden>
+        <div class="card" id="splash-page" >
             <form  id="start-form">
                 <div class="selection-container">
                     <div class="radio-container">
@@ -23,7 +22,7 @@ mldivg="en">
                         <input type="radio" name="questions" id="value-10" value="10">
                         <div class="best-score">
                             <span>Best Score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"><span></span>s</span>
                         </div>
                     </div>
                 </div>
@@ -33,7 +32,7 @@ mldivg="en">
                         <input type="radio" name="questions" id="value-25" value="25">
                         <div class="best-score">
                             <span>Best Score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"><span></span>s</span>
                         </div>
                     </div>
                 </div>
@@ -43,7 +42,7 @@ mldivg="en">
                         <input type="radio" name="questions" id="value-50" value="50">
                         <div class="best-score">
                             <span>Best Score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"><span></span>s</span>
                         </div>
                     </div>
                 </div>
@@ -53,11 +52,11 @@ mldivg="en">
                         <input type="radio" name="questions" id="value-100" value="100">
                         <div class="best-score">
                             <span>Best Score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"><span></span>s</span>
                         </div>
                     </div>
                 </div>
-                <div class="selection-footer">
+                <div class="selection-footer" >
                     <button class="start" type="submit">Start Round</button>
                 </div>
             </form>
@@ -65,49 +64,33 @@ mldivg="en">
         
         <!-- countdown  -->
         <div class="card" id="countdown-page" hidden>
-            <h1 class="countdown">3</h1>
+            <h1 class="countdown"></h1>
         </div>
-
+        
         <!-- game  -->
         <div class="card" id="game-page" hidden>
             <div class="item-container">
-                <div class="item selected-item">
-                    <h1>3 x 3 = 30</h1>
-                </div>
-                <div class="item">
-                    <h1>3 x 3 = 30</h1>
-                </div>
-                <div class="item">
-                    <h1>3 x 3 = 30</h1>
-                </div>
-                <div class="item">
-                    <h1>3 x 3 = 30</h1>
-                </div>
-                <div class="item">
-                    <h1>3 x 3 = 30</h1>
-                </div>
-                     
             </div>
             <div class="item-footer">
                 <button class="wrong">Wrong</button>
                 <button class="right">Right</button>
             </div>
         </div>
-
+        
         <!-- score  -->
-        <div class="card" id="score-page">
+        <div class="card" id="score-page" hidden>
             <div class="score-container">
                 <h1 class="title">Your Time</h1>
                 <h1 class="final-time">3.4s</h1>
-                <h1 class="base-time">Base Time: 2.4s</h1>
-                <h1 class="penalty-time">Penalty: +1.0s</h1>
+                <h1 class="best-time">Best Time: <span></span>s</h1>
+                <h1 class="penalty-time">Penalty: +<span></span>s</h1>
             </div>
             <div class="score-footer">
                 <button class="play-again">Play Again</button>
             </div>
         </div>
     </div>
-
+    
     <script type="module" src="script.js"></script>
 </body>
 </html>
