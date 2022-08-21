@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator{
+    background: #fff;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgb(0, 0, 0, 0.6)
+}
+
+.calculator-display{
+    background: #000;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1{
+    margin: 0;
+    padding: 25px;
+    font-size: 45px;
+    overflow-x: auto;
+}
+
+.calculator-buttons{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#equal{
+    grid-column: -2;
+    grid-row: 2 / span 3;
+}
+
+button{
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(199, 199, 199);
+}
+
+button:hover{
+    filter: brightness(110%);
+}
+
+button:active{
+    transform: translateY(2px);
+}
+
+.operator{
+    background: #555;
+    color: #fff;   
+    font-size: 300;
+}
+
+#clear-btn{
+    background: red;
+    color: #fff;
+}
+
+ /* Dropdown Button */
+ .dropbtn {
+    color: white;
+    font-size: 22px;
+    border: none;
+    width: 100px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+
+@media screen and (max-width: 550px) {
+    .calculator {
+        width: 90%;
+    }
+}
